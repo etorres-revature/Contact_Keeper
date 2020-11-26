@@ -4,7 +4,7 @@ import ContactContext from "../../context/contacts/contactContext";
 const ContactForm = () => {
   const contactContext = useContext(ContactContext);
 
-  const { addContact } = ContactContext;
+  const { addContact } = contactContext;
 
   const [contact, setContact] = useState({
     name: "",
@@ -34,38 +34,42 @@ const ContactForm = () => {
       <h2 className="text-primary">ADD CONTACT</h2>
       <input
         type="text"
-        placholder="Input name here... "
+        placeholder="Input name here... "
         name="name"
         value={name}
         onChange={onChange}
       />
       <input
         type="email"
-        placholder="Input email here... "
+        placeholder="Input email here... "
         name="email"
         value={email}
         onChange={onChange}
       />
       <input
         type="text"
-        placholder="Input phone here... "
+        placeholder="Input phone here... "
         name="phone"
         value={phone}
         onChange={onChange}
       />
       <h5>Contact Type: </h5>
       <input
+        className="m p"
         type="radio"
         name="type"
         value="personal"
         checked={type === "personal"}
+        onChange={onChange}
       />
-      Personal{" "}
+      Personal{"   "}
       <input
+        className="m p"
         type="radio"
         name="type"
         value="professional"
         checked={type === "professional"}
+        onChange={onChange}
       />
       Professional
       <div>
