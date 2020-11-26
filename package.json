@@ -1,44 +1,38 @@
 {
   "name": "contact_keeper",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "A full-stack MERN app to store and update user contacts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/etorres-revature/Contact_Keeper/tree/master"
+    "url": "git+https://github.com/etorres-revature/Contact_Keeper.git"
   },
+  "keywords": [
+    "MERN",
+    "mongo",
+    "mongoose",
+    "react",
+    "app"
+  ],
   "author": "Eric D. Torres",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etorres-revature/Contact_Keeper/issues"
+  },
+  "homepage": "https://github.com/etorres-revature/Contact_Keeper#readme",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.16",
+    "nodemon": "^2.0.6"
   }
 }
