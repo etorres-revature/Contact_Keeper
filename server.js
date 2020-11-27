@@ -1,5 +1,4 @@
 const express = require("express");
-const connectDB = require("./db");
 const logger = require("morgan");
 const compression = require("compression");
 const path = require("path");
