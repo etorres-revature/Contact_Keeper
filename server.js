@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const logger = require("morgan");
 const compression = require("compression");
+const path = require("path");
 
 const PORT = process.env.PORT || 34825;
 
@@ -26,6 +27,15 @@ app.get("/", (req, res) => {
 app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/contacts", require("./routes/contacts"));
+
+//serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  //Set a static folder
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
 
 app.listen(PORT, () =>
   console.log(`Your app is now listening at http://localhost:${PORT}`)
