@@ -5,7 +5,9 @@ import alertReducer from "./alertReducer";
 import { SET_ALERT, REMOVE_ALERT } from "../types";
 
 const AlertState = (props) => {
-  const initialState = [];
+  const initialState = {
+    alerts: null
+  };
 
   const [state, dispatch] = useReducer(alertReducer, initialState);
 
@@ -20,7 +22,7 @@ const AlertState = (props) => {
   return (
     <AlertContext.Provider
       value={{
-        alerts: state,
+        alerts: state.alerts,
         setAlert,
       }}
     >

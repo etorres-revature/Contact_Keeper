@@ -6,6 +6,7 @@ const Alerts = () => {
 
   const { alerts } = alertContext;
   return (
+    alerts !== null &&
     alerts.length > 0 &&
     alerts.map((alert) => {
       return (
