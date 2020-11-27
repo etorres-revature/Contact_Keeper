@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 //Define Routes
 app.use("/api/users", require("./routes/users"));
 app.use("/api/auth", require("./routes/auth"));
-app.use("/api/contact", require("./routes/contacts"));
+app.use("/api/contacts", require("./routes/contacts"));
 
 app.listen(PORT, () =>
   console.log(`Your app is now listening at http://localhost:${PORT}`)
