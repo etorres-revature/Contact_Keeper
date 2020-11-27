@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/etorres-revature/Contact_Keeper/issues"
   },
-  "homepage": "https://github.com/etorres-revature/Contact_Keeper#readme",
+  "homepage": "https://vast-harbor-40152.herokuapp.com/",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
