@@ -46,8 +46,8 @@ const ContactState = (props) => {
     try {
       const res = await axios.post("/api/contacts", contact, config);
       dispatch({ type: ADD_CONTACT, payload: res.data });
-    } catch (error) {
-      dispatch({ type: CONTACT_ERROR, payload: error.response.msg });
+    } catch (err) {
+      dispatch({ type: CONTACT_ERROR, payload: err.response.msg });
     }
   };
 
@@ -72,9 +72,9 @@ const ContactState = (props) => {
   };
 
   //Clear Contacts
-  const clearContacts =() => {
-    dispatch({type: CLEAR_CONTACTS})
-  }
+  const clearContacts = () => {
+    dispatch({ type: CLEAR_CONTACTS });
+  };
 
   //Filter Contacts
   const filterContacts = (text) => {
@@ -101,7 +101,7 @@ const ContactState = (props) => {
         filterContacts,
         clearFilter,
         getContacts,
-        clearContacts
+        clearContacts,
       }}
     >
       {props.children}
